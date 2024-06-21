@@ -523,7 +523,7 @@ h3 {
     flex-direction: column;
     justify-content: center;
     margin: 0 auto;
-    height: 100vh;
+    height: 100dvh;
     text-align: center; 
     align-self: center;
     color: var(--secondary-color);
