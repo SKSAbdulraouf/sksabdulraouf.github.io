@@ -211,7 +211,7 @@ body {
     display: flex;
     justify-content: center;
     /* height: 100vh; */
-    height: calc(100vh - 130px); 
+    height: calc(100dvh - 130px); 
     /* 130px is the header height */
     margin: 0 auto;
 }
@@ -900,6 +900,10 @@ h3 {
         #home {
             height: auto;
         }
+        #error {
+            height: auto;
+        }
+
  
     }
 }
