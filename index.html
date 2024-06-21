@@ -1,111 +1,204 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Your Name - Portfolio</title>
-  <style>
-    body {
-      font-family: 'Arial', sans-serif;
-      margin: 0;
-      padding: 0;
-      background-color: #f4f4f4;
-    }
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="SKSA Portfolio" />
+    <meta name="author" content="Sayyed Khatami S. Abdulraouf" />
+    <title>SKSAbdulraouf</title> 
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
-    header {
-      background-color: #333;
-      color: #fff;
-      text-align: center;
-      padding: 20px 0;
-    }
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="icon" href="assets/favicon.svg" type="image/svg">
+    <style>
+      @media screen and (max-width:768px) {
+        .sun-and-moon {
+        margin-right: 3.5rem;
+        }
+      }
+    </style>
+  </head>
 
-    header h1 {
-      margin: 0;
-    }
+  <body>
+    <header class="header change-color" id="targetHeader">
+        <div class="main-header wrapper">
+            <div class="web-logo">
+                <a href="#">
+                    <img src="assets/SKSA logo.svg" id="logo" oncontextmenu="return false"/>
+                </a>
+                <div class="default-web-name position">
+                    <b>SKSA</b>
+                    <!-- ARTS </b><p>AND DESIGNS</p> -->
+                    <!-- <p>DESIGN LAB</p> -->
+                </div>
+                <div class="new-web-name position">
+                    <b>SKSA </b>
+                    <!-- A&D -->
+                </div>
+            </div>
 
-    header p {
-      margin: 5px 0;
-    }
+            <input type="checkbox" id="check">
+            <label for="check" class="menu">
+                <i class="bx bx-menu" id="menu-icon"> </i>
+                <i class="bx bx-x" id="close-icon"> </i>
+            </label>
 
-    section {
-      background-color: #fff;
-      margin-bottom: 20px;
-      padding: 40px 20px;
-    }
+            <nav class="navbar">
+                <a href="#projects">Projects</a>
+                <a href="#about">About</a>
+                <a href="#contact">Contact</a>
+            </nav>
 
-    h2 {
-      color: #333;
-    }
+            <div class="toggle-container">
+                <input type="checkbox" id="toggle" onclick="toggleDarkMode()">
+                <label for="toggle" class="toggle-button"></label>
+                <div for="toggle" class="sun-and-moon">
+                    <i class="bx bx-moon" id="moon-icon"></i>
+                    <i class="bx bx-sun" id="sun-icon"> </i>
+                </div>
+            </div>
+        </div>
+    </header>
 
-    p {
-      line-height: 1.6;
-    }
+    <main>
 
-    .project-card {
-      margin: 20px 0;
-    }
+      <!-- HERO SECTION -->
 
-    .project-card img {
-      max-width: 100%;
-      height: auto;
-    }
+      <section id="home" class="wrapper">
+        <div class="introduction" >
+          <h1 data-aos="fade-up">
+            <span class="highlight">Hi, I am</span> Sayyed <br> Khatami S. Abdulraouf,
+            <span class="highlight">a</span> <br> 
+            <span id="profession" ></span>
+          </h1>
 
-    .contact-button {
-      display: inline-block;
-      padding: 10px 20px;
-      margin-top: 10px;
-      background-color: #333;
-      color: #fff;
-      text-decoration: none;
-      border-radius: 5px;
-    }
+          <div data-aos="fade-up" data-aos-delay="300">
+            <a href="Page Not Found!.html" target="_blank"><i class="bx bxl-facebook social-media-icon social-media-icon-solid"></i></a>
+            <a href="http://instagram.com/sksa_arts_and_designs" target="_blank"><i class="bx bxl-instagram social-media-icon social-media-icon-solid"></i></a>
+            <a href="http://x.com/SaedoKatami" target="_blank"><i class="bx bxl-twitter social-media-icon social-media-icon-solid"></i></a>
+            <a href="Page Not Found!.html" target="_blank"><i class="bx bxl-linkedin social-media-icon social-media-icon-solid"></i></a>
+          </div>
+          <div class="btn-container" data-aos="fade-up" data-aos-delay="600">
+            <a href="https://drive.google.com/file/d/1zQKVvR73Sse6w_UPKqqvnv_yLeNBefbp/view?usp=sharing" class="btn btn-solid" target="_blank">
+                See my CV </a>
+            <a href="#contact" class="btn btn-outlined">
+              Let's talk </a>
+          </div>
+          <div id="work-status" data-aos="fade-up" data-aos-delay="900">
+            Currently designing at N/A | Previously at 
+              <a href="https://www.facebook.com/itsmarawi" class="work-link" target="_blank">
+                Marawi IT Solutions</a>
+          </div>
+        </div>
+      </section>
 
-    footer {
-      background-color: #333;
-      color: #fff;
-      text-align: center;
-      padding: 10px 0;
-    }
-  </style>
-</head>
-<body>
+      <!-- PREVIOUS PROJECTS -->
 
-  <header>
-    <h1>Your Name</h1>
-    <p>Web Developer</p>
-  </header>
+      <section id="projects" class="wrapper">
+        <h2 class="title" data-aos="fade-right">
+          Previous <span class="highlight">Projects</span>
+        </h2>
+        <div class="block">
+          <a href="Page Not Found!.html">
+            <img src="assets/Electronic Secured QR-Code.png" class="project-img"  data-aos="fade-up">
+          </a>
+          <h3 data-aos="fade-up" data-aos-delay="300">Electronic Secured QR-Code (e-SeQR)</h3>
+        </div>
+        <div class="block">
+          <a href="Page Not Found!.html">
+            <img src="assets/Atoran Billing System.png" class="project-img"  data-aos="fade-up">
+          </a>
+          <h3 data-aos="fade-up" data-aos-delay="300">ATORAN Billing System</h3>
+        </div>
+      </section>
 
-  <section>
-    <h2>About Me</h2>
-    <p>
-      Welcome to my portfolio! I am a passionate web developer with a strong background in creating responsive and user-friendly websites.
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-    </p>
-  </section>
+      <!-- ABOUT ME -->
 
-  <section>
-    <h2>Projects</h2>
-    <div class="project-card">
-      <img src="project1.jpg" alt="Project 1">
-      <h3>Project 1</h3>
-      <p>Description of Project 1 goes here.</p>
+      <section id="about">
+        <div class="about-contents wrapper">
+          <div class="my-introduction">
+            <h2 data-aos="fade-right">
+              <span class="highlight">Hey there, I'm</span>
+               SK<span class="highlight">!</span>
+            </h2>
+            <p class="paragraph" data-aos="fade-right" data-aos-delay="300">
+              I'm a UX/UI designer and Graphic Designer with a strong determination, fueled by passion, and an eagerness to learn new skills.
+              My journey began with a UX/UI internship at a startup company. During this time, 
+              I had the privilege of collaborating with diverse teams and gain essential skills necessary in this field.
+            </p>
+            <p class="paragraph" data-aos="fade-right" data-aos-delay="600">
+              Whether I'm wireframing or exploring new design concepts, I am eager to further improve my skills and push boundaries.
+              Each project, regardless of its scale, serves as an opportunity to learn and acquire new experiences.
+              With every challenge, I face with confidence, enthusiasm and a drive to broaden my horizons and become a better designer.
+              I'm always open to new opportunities and collaborations, so feel free to reach out!
+            </p>
+          </div>
+          <div class="my-picture" data-aos="fade-left" data-aos-delay="300">
+            <img src="assets/mockup.png" oncontextmenu="return false">
+          </div>
+        </div>  
+      </section>
+      
+      <!-- CONTACT ME -->
+      
+      <section id="contact" class="wrapper">
+        <h2 data-aos="fade-up">
+          <span class="highlight">Got a new </span> project<span class="highlight">?<br> Let's </span> talk 
+          <span class="highlight"> about it!</span>
+        </h2>
+        <form action="" class="message-form">
+          <div class="space-btw-inputs" data-aos="fade-up" data-aos-delay="300">
+            <input type="text" id="name"  name="name" class="message-input" placeholder="Full Name" required></input>
+          </div>
+          <div class="space-btw-inputs" data-aos="fade-up" data-aos-delay="300">
+            <input type="email" id="email" name="email" class="message-input" placeholder="Email Address" required></input>
+          </div>
+          <div class="space-btw-inputs" data-aos="fade-up" data-aos-delay="300">
+            <input type="text" id="subject" name="subject" class="message-input" placeholder="Email Subject" required></input>
+          </div>
+          <div class="space-btw-inputs" data-aos="fade-up" data-aos-delay="300">
+            <textarea name="message" id="message" class="message-input message-area" placeholder="How can I help you?" rows="10" cols="30" required></textarea>
+          </div>          
+        </form>
+        <div class="btn-container" data-aos="fade-down" data-aos-delay="300">
+          <div class="btn btn-solid" onclick="redirectToEmail()" style="cursor: pointer;">
+            Send Message
+          </div>
+            <!-- <input class="btn btn-solid" type="button" value="Send Message" onclick="redirectToEmail()" style="cursor:pointer;"> -->
+        </div>
+      </section>
+
+      <!-- <div class="box" data-aos="fade-up" style="background: green; margin: 1rem; height: 4rem;"></div>
+      <div class="box" data-aos="fade-down" style="background: pink; margin: 1rem; height: 4rem;"></div>
+      <div class="box" data-aos="fade-left" style="background: blue; margin: 1rem; height: 4rem;"></div>
+      <div class="box" data-aos="fade-right" style="background: yellow; margin: 1rem; height: 4rem;"></div> -->
+
+    </main>
+
+    <footer >
+      <div class="footer-contents wrapper">
+        <div class="copyright" data-aos="fade-down">
+          &copy 2024 SKSA | All Rights Reserved
+        </div>
+        <div data-aos="fade-down">
+          <a href="Page Not Found!.html" target="_blank"><i class="bx bxl-facebook social-media-icon social-media-icon-outline"></i></a>
+          <a href="http://instagram.com/sksa_arts_and_designs" target="_blank"><i class="bx bxl-instagram social-media-icon social-media-icon-outline"></i></a>
+          <a href="http://x.com/SaedoKatami" target="_blank"><i class="bx bxl-twitter social-media-icon social-media-icon-outline"></i></a>
+          <a href="Page Not Found!.html" target="_blank"><i class="bx bxl-linkedin social-media-icon social-media-icon-outline"></i></a>
+        </div>
+      </div>
+    </footer>
+
+    <div class="page-scroller scroller-hide" id="targetScroller">
+        <a href="#" class="scroll-to-top-btn">
+            <i class="bx bx-up-arrow-alt"></i>
+        </a>
     </div>
-    <div class="project-card">
-      <img src="project2.jpg" alt="Project 2">
-      <h3>Project 2</h3>
-      <p>Description of Project 2 goes here.</p>
-    </div>
-  </section>
+    
+    <script src="js/script.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="js/AOS.js"></script>
 
-  <section>
-    <h2>Contact Me</h2>
-    <p>Feel free to get in touch with me. I'm available for collaboration and new opportunities.</p>
-    <a href="mailto:your.email@example.com" class="contact-button">Email Me</a>
-  </section>
-
-  <footer>
-    <p>&copy; 2024 Your Name. All rights reserved.</p>
-  </footer>
-
-</body>
+  </body>
 </html>
