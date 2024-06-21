@@ -244,6 +244,7 @@ h2 {
 .social-media-icon {
     text-align: center;
     align-content: center;
+    align-items: center;
     font-size: 25px;
     margin: 10px;
     /* this is the circle */
